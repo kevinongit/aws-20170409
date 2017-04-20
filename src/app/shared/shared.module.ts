@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component'
+import { NavHeaderComponent } from './nav-header/nav-header.component'
 import { FooterComponent } from './footer/footer.component'
 
 /**
@@ -12,8 +13,8 @@ import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
     imports: [CommonModule, RouterModule],
-    declarations: [ HeaderComponent, FooterComponent ],
-    exports: [CommonModule, FormsModule, RouterModule, HeaderComponent, FooterComponent]
+    declarations: [ HeaderComponent, NavHeaderComponent, FooterComponent ],
+    exports: [CommonModule, FormsModule, RouterModule, HeaderComponent, NavHeaderComponent, FooterComponent]
 })
 export class SharedModule {
     static forRoot(): ModuleWithProviders {
