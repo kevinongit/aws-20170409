@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input, ViewEncapsulation } from '@angular/core'
 
 // import { SliderComponent } from './slider.component'
 
@@ -12,20 +12,21 @@ import { CarouselConfig } from 'ngx-bootstrap/carousel'
         color: blue !important;
     }
     .carousel {
-     background: white !important;
+     background: none !important;
      color: bule !important;
     }
-    .carousel-control.right, .carousel-control.left {
-  background-image:none !important;
-  visibility:hidden !important;
-}
+    .left.carousel-control, .right.carousel-control {
+        background-image: none;
+        filter: progid: none !important;
+        display: none;
+        filter:none !important;
+        outline: 0;
+        opacity: 1;
+    }
     `],
-    providers: [{provide: CarouselConfig, useValue: {interval: 1500, noPause: true} }]
+    encapsulation: ViewEncapsulation.None
+    // providers: [{provide: CarouselConfig, useValue: {interval: 1500, noPause: true} }]
 })
 export class BannerComponent {
-    public slides = [
-        { title : "Smart But Casual", content : "Start Something..."},
-        { title : "Second Phrase", content : "Start Something..."},
-        { title : "Third Porviders", content : "Start Something..."}
-    ];
+    @Input() myCarouselData: any[];
 }

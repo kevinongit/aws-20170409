@@ -4,22 +4,16 @@
             <div class="banner-bottom-left">
                 <h2>B<br>U<br>Y</h2>
             </div>
-            
             <div class="banner-bottom-right">
-                <div class="callbacks_container carousel">
-                    
+                <div id="myCarousel" class="callbacks_container">
                         <ul class="slides">
                             <carousel>
-                            
-                                <slide *ngFor="let slide of slides">
-                                    
+                                <slide *ngFor="let slide of myCarouselData">  
                                     <div class="banner-info">
                                         <h3> {{ slide.title }} </h3>
                                         <p> {{ slide.content }} </p>
                                     </div>
                                 </slide>
-                                
-                            
                             </carousel>
                         </ul>
                 </div>

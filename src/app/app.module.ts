@@ -15,6 +15,8 @@ import {
   PreloadAllModules
 } from '@angular/router';
 
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -49,7 +51,8 @@ import '../styles/headings.css';
     HttpModule,
     SharedModule.forRoot(),
     HomeModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    // NgbModule.forRoot()
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS

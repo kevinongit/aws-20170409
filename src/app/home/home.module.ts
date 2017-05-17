@@ -6,6 +6,7 @@ import { CarouselModule } from 'ngx-bootstrap'
 import { HomeComponent } from './home.component'
 import { routing } from './home.routes'
 
+import { HomeService } from './home.service';
 import { BannerComponent } from './banner'
 // import { SliderComponent } from './banner'
 
@@ -23,7 +24,7 @@ import { BannerComponent } from './banner'
         HomeComponent
     ],
     providers : [
-
+        HomeService
     ]
 })
 export class HomeModule {}
